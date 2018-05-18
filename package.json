@@ -1,0 +1,36 @@
+{
+  "name": "front-end-test-by-andre-brandao",
+  "version": "1.0.0",
+  "description": "Front-End Test for Styling & JS",
+  "main": "index.js",
+  "scripts": {
+    "dev": "gulp watch",
+    "build": "gulp build",
+    "server": "gulp server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@bitbucket.org/andrebrandaoo/an_br.git"
+  },
+  "author": "https://github.com/andrebrandaoo",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/andrebrandaoo/an_br#readme",
+  "dependencies": {
+    "clear": "^0.1.0",
+    "express": "^4.16.3",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-connect": "^5.5.0",
+    "gulp-pug": "^4.0.1",
+    "gulp-rename": "^1.2.3",
+    "gulp-sourcemaps": "^2.6.4",
+    "gulp-stylus": "^2.7.0",
+    "gulp-uglifycss": "^1.0.9",
+    "gulp-webpack-sourcemaps": "^0.3.0",
+    "webpack": "^4.7.0",
+    "webpack-stream": "^4.0.3"
+  },
+  "devDependencies": {
+    "webpack-cli": "^2.1.2"
+  }
+}
