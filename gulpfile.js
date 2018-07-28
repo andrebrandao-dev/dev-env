@@ -25,6 +25,14 @@ gulp.task('pug', () => {
     .pipe(gulp.dest('./dist'))
 })
 
+gulp.task('css', () => {
+  return gulp.src([
+    './node_modules/animate.css/animate.min.css',
+  ])
+  .pipe(concat('vendor.min.css'))
+  .pipe(gulp.dest('./dist/assets/styles'))
+})
+
 gulp.task('styles', () => {
   return gulp.src('./src/assets/styles/main.styl')
     .pipe(sourcemaps.init())
@@ -39,18 +47,25 @@ gulp.task('styles', () => {
 
 gulp.task('scripts', () => {
   return gulp.src([
+    './node_modules/jquery/dist/jquery.min.js',
+    './node_modules/wow.js/dist/wow.min.js',
     './src/assets/js/app.js'
   ])
   .pipe(concat('app.js'))
   .pipe(gulp.dest('./dist/assets/js'))
 })
 
+gulp.task('fonts', () => {
+  return gulp.src('./src/assets/fonts/**/*.{eot,svg,ttf,woff,otf}')
+    .pipe(gulp.dest('./dist/assets/fonts'))
+})
+
 gulp.task('images', () => {
-  return gulp.src('./src/assets/images/**/*.{gif,jpg,png,svg}')
+  return gulp.src('./src/assets/images/**/*.{gif,jpg,png,svg,jpeg}')
     .pipe(gulp.dest('./dist/assets/images'))
 })
 
-gulp.task('build', ['pug', 'styles', 'scripts', 'images'])
+gulp.task('build', ['pug', 'css', 'styles', 'scripts', 'images', 'fonts'])
 
 gulp.task('watch', ['clear', 'build', 'server'], () => {
   gulp.watch('./src/**/*.pug', ['pug'])

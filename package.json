@@ -31,6 +31,9 @@
     "webpack-stream": "^4.0.3"
   },
   "devDependencies": {
-    "webpack-cli": "^2.1.2"
+    "animate.css": "^3.7.0",
+    "jquery": "^3.3.1",
+    "webpack-cli": "^2.1.2",
+    "wow.js": "^1.2.2"
   }
 }
