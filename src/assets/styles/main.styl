@@ -1,22 +1,21 @@
 @import "reset.styl"
+@import "helpers/**/*.styl"
 @import "components/**/*.styl"
 
 body
   font-family 'Open Sans', sans-serif
-  display flex
-  width 100vw
-  height 100vh
-  align-items center
-  justify-content center
-  text-align center
-  font-size 70%
-  overflow hidden
+  max-width 100%
+  min-height 100vh
+  height auto
+  overflow-x hidden
+  overflow-y auto
+  background-color #FFF
+  color #333
+  font-size 14px
 
 a
-  color #06389a
-  font-size 2rem
   text-decoration none
-  margin-top 50px
-  display block
-  &:hover
-      text-decoration none
+  color #333
+
+p + p
+  margin-top 15px

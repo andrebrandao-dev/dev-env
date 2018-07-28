@@ -2,13 +2,25 @@ doctype html
 html(lang="en")
   head
     meta(charset="utf-8")
+    meta(name="theme-color" content="#bf172b")
+    meta(name="msapplication-navbutton-color" content="#bf172b")
+    meta(name="apple-mobile-web-app-status-bar-style" content="#bf172b")
     meta(name="viewport" content="width=device-width, initial-scale=1.0")
-    title Dev Env
-    link(rel="icon" href="assets/images/favicon.png" type="image/png")
+    
+    block variables
+
+    title=title
+    //- link(rel="icon" href="assets/images/favicon.png" type="image/png")
     link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans")
+    link(rel="stylesheet" href="assets/styles/vendor.min.css")
     link(rel="stylesheet" href="assets/styles/main.min.css")
+  
   body
     #app
+      
+      include ../components/application/header.pug
+      +appHeader(title)
+
       block content
     
     script(src="assets/js/app.js")

@@ -1,9 +1,26 @@
 extends ../layout/application.pug
 
+block append variables
+  - var title = 'Dev Env'
 
 block content
+  section.app-section
+    .app-section-header
+      h1.app-section-title Hello World!
+    .app-section-body
+      .container.t-center
+        p Developed by:
+          a(href="http://github.com/andrebrandaoo") &nbsp;André Brandão
 
-  include ../components/intro.pug
-  
-  p
-    a(href="http://github.com/andrebrandaoo") André Brandão
+  section.app-section
+    .app-section-header
+      h1.app-section-title Features
+    .app-section-body
+      .container.t-center
+        ul
+          li Gulp
+          li Stylus
+          li Pug
+          li Jquery
+          li wow.js
+          li animate.css
