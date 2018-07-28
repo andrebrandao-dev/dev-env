@@ -36,6 +36,7 @@ this will run at :8080 port as default
 ## Generating build files with images compressed
 
 the build folder will be in ./dist
+
 `$ yarn build`
 
 ## Directory struct
